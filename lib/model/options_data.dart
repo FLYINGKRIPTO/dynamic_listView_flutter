@@ -29,7 +29,6 @@ class OptionsData{
 
 
   String getOption(int index){
-
     return _optionsList[index].title;
   }
 
