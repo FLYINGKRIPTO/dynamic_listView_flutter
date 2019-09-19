@@ -66,7 +66,18 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Padding(
         padding: EdgeInsets.all(10.0),
-       child: getOptionsListView(),
+       //child: getOptionsListView(),
+       child: Column(
+         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+         crossAxisAlignment: CrossAxisAlignment.stretch,
+         children: <Widget>[
+           //First Child
+
+           //Second Child
+           getOptionsListView(),
+
+         ],
+       ),
       )
 
     );
@@ -84,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
               navigateToDetail(this.onlyOptions[position],position);
           },
         ),
+
       );
     });
   }
