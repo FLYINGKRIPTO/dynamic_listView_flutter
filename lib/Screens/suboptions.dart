@@ -79,9 +79,14 @@ class _SubOptionsState extends State<SubOptions> {
                   prefix0.debugPrint('option clicked');
                  // debugPrint(mySubOptions[position].toString());
                   debugPrint(subOptions[position].toString());
-                  navigateToThemeAndLayout(
-                        this.subOptions[position], position);
 
+                  if(subOptions[position].toString()=='Theme and Layout') {
+                    navigateToThemeAndLayout(
+                        this.subOptions[position], position);
+                  }
+                  else {
+                    debugPrint('Other Option Clicked');
+                  }
                 }),
             Divider()
           ]);
