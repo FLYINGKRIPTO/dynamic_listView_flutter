@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'options.dart';
 class OptionsData{
   List<Options> _optionsList = [
-
     Options("Account",["Change Email","Name","Change Password","Logout"]),
     Options("Premium",["Available Plans","Due date","Current Plan","Invoices","Cancel/Update Subscription",
     "Contact Customer Care"]),
@@ -32,8 +31,14 @@ class OptionsData{
     return _optionsList[index].title;
   }
 
+
   List<String> getSubOptions(int index){
     return _optionsList[index].subOptions;
+  }
+
+  int getSubOptionListLength(int index){
+    int length = _optionsList[index].subOptions.length;
+    return length;
   }
 
 }
